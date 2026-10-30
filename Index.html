@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JUKIE: encuentra decoración para tu hogar en tiendas de República Dominicana y Estados Unidos.">
+  <title>JUKIE — Decoración para tu hogar</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="top-note">UN HOGAR MÁS TUYO, A TU MANERA ✦ RD + USA</div>
+  <header class="site-header">
+    <a class="logo" href="#inicio">JUKIE<span>✦</span></a>
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a><a href="#categorias">Categorías</a>
+      <a href="#productos" data-origin-link="usa">Tienda USA</a>
+      <a href="#productos" data-origin-link="rd">Tienda RD</a>
+    </nav>
+    <label class="search">⌕ <input id="searchInput" type="search" placeholder="Buscar productos..." aria-label="Buscar productos"></label>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow">Decoración para tu hogar</span>
+        <h1>Todo lo que necesitas para un hogar <em>más tuyo.</em></h1>
+        <p>Encuentra muebles y decoración de tiendas de República Dominicana y Estados Unidos, en un solo lugar.</p>
+        <a class="primary-btn" href="#categorias">Explorar categorías →</a>
+      </div>
+      <div class="hero-art" aria-label="Decoración colorida para el hogar">
+        <div class="art-card card-one">good decor<br>better mood ☺</div>
+        <div class="art-card card-two">MAKE<br>YOURSELF<br>AT HOME</div>
+        <div class="art-circle"></div>
+      </div>
+    </section>
+
+    <section class="section" id="categorias">
+      <div class="section-head"><h2>✦ Explora por categoría</h2></div>
+      <div class="category-grid" id="categoryGrid"></div>
+    </section>
+
+    <section class="section" id="productos">
+      <div class="section-head">
+<h2 id="productsTitle">Productos destacados</h2>        <button class="text-button" id="resetFilters">Ver todos →</button>
+      </div>
+      <div class="filter-row" id="filterRow">
+        <button class="chip active" data-filter="all">Todos</button>
+        <button class="chip" data-filter="rd">En RD</button>
+        <button class="chip" data-filter="usa">En USA · vía courier</button>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+    
+    <section class="about-section" id="sobre-jukie">
+      <div class="about-copy">
+        <span class="eyebrow">Un poquito sobre nosotros</span>
+        <h2>Un lugar para reunir todas esas cosas que <em>nos encantan.</em></h2>
+        <p>JUKIE nace de nuestras ganas de encontrar cosas bonitas para el hogar sin tener que buscar en mil lugares diferentes. Entre tantos links, tiendas y favoritos guardados, pensamos: ¿por qué no tenerlo todo en un mismo lugar? </p>
+
+<p>Así reunimos nuestros finds favoritos de tiendas de República Dominicana y Estados Unidos, para que tú también puedas inspirarte, descubrir cosas nuevas y encontrar esas piezas que tanto imaginaste para tu casa.</p>
+        <p>Nos gusta lo bonito, lo funcional y eso que hace que digas: “esto quedaría perfecto en mi casa”. Así de simple.</p>
+        <div class="about-steps">
+          <div class="about-step">
+            <strong>✳ Descubre</strong>
+            <span>Explora categorías, productos, colores e ideas para tus espacios.</span>
+          </div>
+          <div class="about-step">
+            <strong>↗ Encuentra</strong>
+            <span>Conoce la tienda donde está disponible cada pieza.</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-note">
+        <div class="note-mark">✳</div>
+        <h3>¿Y cómo compras?</h3>
+        <p>Si el producto está en RD, puedes continuar en la tienda local. Si está en USA, revisa que la tienda envíe a tu courier y completa la compra directamente con el vendedor. JUKIE te ayuda a descubrir; la compra se realiza en la tienda original.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer><a class="logo" href="#inicio">JUKIE<span>✦</span></a><span>Decoración que se siente como tú.</span><span>Catálogo de tiendas externas.</span></footer>
+
+  <dialog id="productDialog" class="product-dialog">
+    <button class="dialog-close" id="closeDialog" aria-label="Cerrar">×</button>
+    <div class="dialog-layout">
+      <div class="dialog-photo"><img id="dialogImage" src="" alt=""></div>
+      <div class="dialog-info">
+        <span class="store-tag" id="dialogStore"></span>
+        <h2 id="dialogName"></h2>
+        <p id="dialogDescription"></p>
+        <p class="dialog-price" id="dialogPrice"></p>
+        <p class="field-label">Colores disponibles</p>
+        <div id="dialogColors" class="color-options"></div>
+        <p class="tiny-note" id="dialogShipping"></p>
+        <a class="primary-btn" id="buyButton" href="#" target="_blank" rel="noopener noreferrer">Comprar ahora ↗</a>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
